@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import WelcomeCard from './Components/WelcomeCard';
+import Counter from './Components/Counter';
+import StudentInfo from './Components/StudentInfo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={styles.container}>
+      <WelcomeCard name="Jerick" />
+      <Counter />
+      <StudentInfo />
     </div>
   );
 }
+
+const styles = {
+  container: {
+    padding: '40px',
+    backgroundColor: '#f9f9f9',
+    fontFamily: 'Segoe UI, sans-serif',
+    minHeight: '100vh',
+  }
+};
 
 export default App;
